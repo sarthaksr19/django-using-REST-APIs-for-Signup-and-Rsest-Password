@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logged In | Welcome</title>
+</head>
+
+<body>
+  
+  <h1>Welcome {{request.user}}!!!</h1>
+  <h3>This is Your Dashboard</h3>
+{% if perms.home.add_user %}
+  <button>Add Student</button>
+{% endif %}
+{% if perms.home.delete_user %}
+  <button>Remove Student</button>
+{% endif %}
+{% if perms.home.view_user %}
+  <button>View Student</button>
+{% endif %}
+{% if perms.home.change_user %}
+  <button>Update Student</button>
+{% endif %}
+  <p>Here is Your Assignments</p>
+  <button> <a href="/logout" style="text-decoration: none;">Logout</a> </button>
+</body>
+
+</html>

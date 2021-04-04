@@ -1,0 +1,9 @@
+Some guide if user want to reset or forgot his password.
+- Go to the link on login form where we attached a link of forgot password..click on it.
+- Enter the email which belongs to a you and hit POST.
+- After getting the token from backend terminal. Copy the link which is in email, will be similar to /api/password_reset/?token=54cggsghgthhh...........
+- Now, copy that token which comes in email and post token and password to /api/password_reset/confirm/ api url.
+- In response you will getting this after clicking on POST
+{
+    'status':'OK'
+}
